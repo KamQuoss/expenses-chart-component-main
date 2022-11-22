@@ -69,7 +69,7 @@ body {
 }
 
 .chart {
-  min-height: 240px; // tu wróć żeby sprawdzić
+  min-height: 240px;
   padding: clamp(10px, 1.389vw, 20px) 0;
   &__bar {
     border-radius: 5px;
