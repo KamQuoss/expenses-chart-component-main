@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+$root-font-size : 18px;
+$font-family: 'DM Sans', sans-serif;
+$font-weights: ('regular': 400, 'bold': 700);
+
+@mixin base-font {
+    font-family: $font-family;
+    font-size: $root-font-size;
+}
+
+@mixin bold {
+    font-weight: map-get($font-weights, 'bold');
+}

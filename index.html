@@ -4,63 +4,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
   <title>Frontend Mentor | Expenses chart component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <main>
-    <div class="box red">
-  My balance
-  $921.48
-    </div>
-    <div class="box white">
-      <h3>  Spending - Last 7 days</h3>
-      <div class="chart-wrapper">
-
-  mon
-  tue
-  wed
-  thu
-  fri
-  sat
-  sun
+  <div class="card">
+    <div class="card__header box box--red">
+      <div class="balance card__balance">
+        <div class="balance__text text">
+          My balance
+        </div>
+        <div class="balance__amount amount amount--medium">
+          $921.48
+        </div>
       </div>
-      <div class="details">
-          Total this month
-  $478.33
-
-  +2.4%
-  from last month
+      <div class="card__icon">
       </div>
     </div>
-  </main>
-
-
-
-
-
-
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="https://github.com/KamQuoss">KamQuoss</a>.
+    <div class="card__body box">
+      <div class="card__title">Spending - Last 7 days</div>
+      <div class="card__chart chart"></div>
+      <div class="card__summary summary">
+        <div class="summary__this-month">
+          <div class="summary__text text">
+            Total this month
+          </div>
+          <div class="summary_amount amount amount--big">$478.33</div>
+        </div>
+        <div class="summary__last-month">
+          <div class="summary_amount amount">+2.4%</div>
+          <div class="summary__text text">from last month</div>
+        </div>
+      </div>
+    </div>
   </div>
+
+  <script type="module" src="script.js"></script>
 </body>
 
 </html>
