@@ -18,26 +18,27 @@ body {
 .card {
   @include base-font;
   color: $dark-brown;
-  width: 540px;
+  width: clamp(343px, 37.500vw, 540px);
+  margin: 0 16px;
   display: flex;
   flex-direction: column;
 
   &__header {
     color: $very-pale-orange;
-    padding: 30px 32px;
+    padding: clamp(24px, 2.083vw, 30px) clamp(22px, 2.222vw, 32px);
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
   &__body {
-    padding: 40px;
+    padding: clamp(24px, 2.778vw, 40px);
   }
 
   &__icon {
-    width: 48px;
-    height: 48px;
-    margin-right: 8px;
+    width: clamp(40px, 3.333vw, 48px);
+    height: clamp(40px, 3.333vw, 48px);
+    margin-right: clamp(4px, 0.556vw, 8px);
     background-color: $dark-brown;
     border-radius: 50%;
     position: relative;
@@ -56,7 +57,7 @@ body {
 
   &__title {
     @include bold;
-    font-size: 32px;
+    font-size: clamp(24px, 2.222vw, 32px);
   }
 
   &__chart {
@@ -68,12 +69,12 @@ body {
 }
 
 .chart {
-  min-height: 240px;
-  padding: 20px 0;
+  min-height: 240px; // tu wróć żeby sprawdzić
+  padding: clamp(10px, 1.389vw, 20px) 0;
   &__bar {
     border-radius: 5px;
     background-color: $soft-red;
-    width: 50px;
+    width: clamp(33px, 3.472vw, 50px);
     position: relative;
     &::before {
       @include bold;
@@ -82,8 +83,8 @@ body {
       background-color: $dark-brown;
       color: $very-pale-orange;
       border-radius: 5px;
-      padding: 12px;
-      top: calc(-40px - 10px);
+      padding: clamp(4px, 0.556vw, 8px);
+      top: -40px;
       left: 50%;
       transform: translateX(-50%);
       opacity: 0;
@@ -105,7 +106,8 @@ body {
   }
   &__label {
     @include display-flex-center;
-    height: 50px;
+    height: clamp(40px, 3.472vw, 50px);
+    font-size: clamp(12px, 1.042vw, 15px);
     color: $medium-brown;
   }
 }
@@ -113,7 +115,7 @@ body {
 .summary {
   display: flex;
   justify-content: space-between;
-  padding-top: 36px;
+  padding-top: clamp(26px, 2.500vw, 36px);
   padding-bottom: 8px;
   &__last-month {
     display: flex;
@@ -129,7 +131,7 @@ body {
 .box {
   background-color: $very-pale-orange;
   border-radius: $root-font-size;
-  margin-bottom: 22px;
+  margin-bottom: clamp(16px, 1.528vw, 22px);
 
   &--red {
     background-color: $soft-red;
@@ -146,9 +148,9 @@ body {
     margin-bottom: 4px;
   }
   &--medium {
-    font-size: 32px;
+    font-size: clamp(24px, 1.667vw ,32px);
   }
   &--big {
-    font-size: 48px;
+    font-size: clamp(28px, 3.333vw, 48px);
   }
 }
